@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+  </head>
+
+  <body>
+    <!-- bar de navigation  -->
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><strong>TodoList</strong></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarColor01"
+          aria-controls="navbarColor01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+    <section class="container">
+      <div class="mb-5">
+        <button
+          class="btn btn-success btn-sm"
+          onclick="deleteAll()"
+          style="float: right"
+        >
+          Supprimer tous
+        </button>
+      </div>
+
+      <!-- Affichage des données -->
+      <div
+        class="mt-4"
+        id="render"
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        "
+      ></div>
+      <!-- formulaire -->
+      <div class="d-flex justify-content-center mt-4 mb-5">
+        <div class="form-group d-flex justify-content-between">
+          <div class="m-2">
+            <strong>
+              <span>+</span>
+            </strong>
+          </div>
+          <div class="m-2">
+            <input
+              class="form-control form-control-sm"
+              type="text"
+              placeholder="Entrer la tâche"
+              id="tache"
+            />
+          </div>
+          <div class="m-2">
+            <button onclick="handleSubmit()" class="btn btn-primary btn-sm">
+              Enregistrer
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
